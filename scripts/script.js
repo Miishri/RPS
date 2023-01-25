@@ -29,7 +29,7 @@ function playRound(playerSelection = prompt("Choose a sign!"), randomChoice = ge
     }else if (player == "scissors") {
 
         if (bot === "paper") {
-            return "You win! Scissors beats Rock";
+            return "You win! Scissors beats Paper";
         }
     }
 

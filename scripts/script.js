@@ -9,23 +9,31 @@ function getComputerChoice() {
         return "scissors";
     }
 }
-//get choice from pc
+
 let playerChoice = "rock"; 
 
-//return number for choice
-function choiceNumber(value) {
-    const valueCase = value.toLowerCase();
-    if (valueCase === "rock") {
-        return 1;
-    }else if (valueCase === "paper") {
-        return 2;
-    }else if (valueCase === "scissors") {
-        return 4;
-    }else {
-        return "provide a proper value";
-    } 
-}
+function playRound(playerSelection, randomChoice = getComputerChoice()) {
+    let player = playerSelection.toLowerCase();
+    let bot = randomChoice.toLowerCase();
 
-function playRound( playerSelection, randomChoice = getComputerChoice()) {
-    //convert sign to value
+    if (player === "rock") {
+
+        if (bot === "scissors") {
+            return "You win! Rock beats Scissors"; 
+        }
+
+    }else if (player === "paper") {
+        
+        if (bot === "rock") {
+            return "You win! Paper beats Rock"
+        }
+
+    }else if (player == "scissors") {
+
+        if (bot === "paper") {
+            return "You win! Scissors beats Rock";
+        }
+    }
+
+    return "You Lose! " + bot + " beats " + player;
 }

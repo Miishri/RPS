@@ -1,1 +1,1 @@
-# RPS
+rock paper sccisors using JS

@@ -8,11 +8,9 @@ function getComputerChoice() {
     }else {
         return "scissors";
     }
-}
+} 
 
-let playerChoice = "rock"; 
-
-function playRound(playerSelection, randomChoice = getComputerChoice()) {
+function playRound(playerSelection = prompt("Choose a sign!"), randomChoice = getComputerChoice()) {
     let player = playerSelection.toLowerCase();
     let bot = randomChoice.toLowerCase();
 
@@ -36,4 +34,10 @@ function playRound(playerSelection, randomChoice = getComputerChoice()) {
     }
 
     return "You Lose! " + bot + " beats " + player;
+}
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        console.log(playRound());
+    }
 }
